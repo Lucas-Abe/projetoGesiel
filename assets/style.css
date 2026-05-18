@@ -18,21 +18,21 @@ body {
     background-color: #d9d9d9;
     height: 15vh;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .navbar-item{
     display: flex;
     justify-content: center;
     flex-direction: row;
+    display: none;
 }
 
 #navbar-img{
-    width: 30%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(55px);
 }
 
 #container-image{
@@ -56,6 +56,18 @@ body {
     padding: 15px 25px;
     background-color: grey;
     color: white;
+}
+
+#hamburguer-button{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10%;
+}
+
+#hamburguer-button:hover{
+    color: white;
+    background-color: black;
 }
 
 /*Header*/
