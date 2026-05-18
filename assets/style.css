@@ -14,6 +14,7 @@ body {
     position: fixed;
     border: 1px solid black;
     display: flex;
+    flex-direction: row;
     width: 100%;
     background-color: #d9d9d9;
     height: 15vh;
@@ -25,7 +26,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    display: none;
+    order: 1;
 }
 
 #navbar-img{
@@ -33,6 +34,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    order: 0;
+}
+
+.hidden{
+    display: none;
 }
 
 #container-image{
@@ -58,14 +64,15 @@ body {
     color: white;
 }
 
-#hamburguer-button{
+#hamburger-button{
     border: 1px solid black;
     padding: 10px;
     border-radius: 5px;
     margin-right: 10%;
+    order: 2;
 }
 
-#hamburguer-button:hover{
+#hamburger-button:hover{
     color: white;
     background-color: black;
 }

@@ -16,3 +16,15 @@ const animacaoApresentacao = containerApresentacao.animate(
         easing: "ease-in-out"
     }
 );
+
+const hamburgerButton = document.getElementById("hamburger-button");
+const navItems = document.querySelectorAll(".navbar-item");
+hamburgerButton.addEventListener("click", () => {
+
+    navItems.forEach(
+        (item) => {
+            item.classList.toggle("hidden");
+        }
+    )
+
+})
