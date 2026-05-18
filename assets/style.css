@@ -17,48 +17,26 @@ body {
     width: 100%;
     background-color: #d9d9d9;
     height: 15vh;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar-item{
-    width: 37.5%;
     display: flex;
     justify-content: center;
     flex-direction: row;
 }
 
-.left {
-    justify-content: right;
+#navbar-img{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(55px);
 }
-
-.left ul{
-    margin-right: 10%;
-}
-
-.left ul a{
-    margin-right: 15%;
-}
-
-.right {
-    justify-content: left;
-}
-
-.right ul{
-    margin-left: 10%;
-}
-
-.right ul a{
-    margin-left: 15%;
-}
-
 
 #container-image{
     width: 50%;
-}
-
-#navbar-img{
-    width: 25%;
-    display: flex;
-    justify-content: center;
 }
 
 #container-image img{
@@ -84,7 +62,6 @@ body {
 
 header{
     display: flex;
-    flex: row;
     height: 640px;
     border: 1px solid red;
     background-color: #F2F2F2;
@@ -110,7 +87,7 @@ header{
     width: 65%;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     justify-content: center;
 }
 
