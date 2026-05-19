@@ -16,7 +16,6 @@ body {
     flex-direction: column;
     width: 100%;
     background-color: #d9d9d9;
-    /*height: 15vh;*/
     align-items: flex-start;
     justify-content: center;
 }
@@ -66,7 +65,6 @@ body {
     display: none;
 }
 
-
 #container-image {
     width: 50%;
     display: flex;
@@ -86,9 +84,10 @@ body {
     border: 1px solid black;
     padding: 10px;
     border-radius: 5px;
-    right: 10%;
+    top: 20px;
     order: 2;
     position: absolute;
+    right: 10%;
 }
 
 #hamburger-button:hover {
@@ -102,8 +101,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid red;
     background-color: #F2F2F2;
+    padding-top: 120px;
 }
 
 #header-pfp {
@@ -111,7 +110,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 35%;
     max-width: 320px;
 }
 
@@ -125,6 +123,8 @@ header {
 
 #header-apresentacao {
     width: 95%;
+    display: flex;
+    flex-direction: column;
 }
 
 #container-apresentacao {
@@ -142,7 +142,6 @@ header {
     margin-bottom: 10px;
 }
 
-
 #botao-servicos {
     padding: 10px 20px;
     background: white;
@@ -152,6 +151,7 @@ header {
     border: 1px solid grey;
     width: 60%;
     margin: auto;
+    max-width: 180px;
 }
 
 #botao-servicos:hover {
@@ -160,7 +160,6 @@ header {
 }
 
 @media(min-width: 375px) {
-
 
     #hamburger-button {
         top: 30px;
@@ -172,23 +171,129 @@ header {
         top: 35px;
     }
 
-    #botao-servicos {
-        width: 50%;
-    }
 }
 
 @media(min-width: 768px) {
+
+    header {
+        padding-top: 150px;
+    }
 
     #header-pfp {
         width: 80%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 20%;
         max-width: 320px;
     }
 
-    #botao-servicos {
-        width: 30%;
+}
+
+@media(min-width: 1000px) {
+
+    #hamburger-button {
+        display: none;
     }
+
+    #header-pfp {
+        margin-left: 5vh;
+    }
+
+    .hidden {
+        display: block;
+    }
+
+    #navbar-container {
+        flex-direction: row;
+        height: 15vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #navbar-img {
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+        order: 1;
+    }
+
+    #container-image {
+        width: 100%;
+        transform: translateY(30px);
+    }
+
+    .navbar-item {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .navbar-item ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    #image-texto {
+        display: none;
+    }
+
+    header {
+        padding-top: 60px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #container-pfp {
+        width: 100%;
+    }
+
+    #container-pfp img {
+        max-width: 100%;
+    }
+
+    #header-apresentacao {
+        width: 70%;
+        height: 35vh;
+    }
+
+    #container-apresentacao {
+        width: 80%;
+    }
+
+
+    #container-apresentacao p {
+        margin-bottom: 10px;
+    }
+}
+
+@media(min-width: 1400px) {
+
+    .navbar-item ul a {
+        padding: 25px 35px;
+        font-size: 1.3em;
+    }
+
+    #header-pfp {
+        max-width: 400px;
+    }
+
+    #container-apresentacao {
+        font-size: 1.5em;
+        line-height: 40px;
+    }
+
+    #header-apresentacao{
+        transform: translateY(-30px);
+    }
+
+    #botao-servicos {
+    padding: 20px 30px;
+    font-size: 1.2em;
+    max-width: 250px;
+}
+
 }
