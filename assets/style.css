@@ -159,6 +159,8 @@ header {
     color: white;
 }
 
+/*Sobre mim*/
+
 @media(min-width: 375px) {
 
     #hamburger-button {
