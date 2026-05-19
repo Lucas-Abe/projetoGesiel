@@ -9,7 +9,7 @@ const animacaoPfp = containerPfp.animate(
     }
 );
 
-const animacaoApresentacao = containerApresentacao.animate(
+containerApresentacao.animate(
     [{ opacity: 0, transform: "translateX(20px)" }, { opacity: 1, transform: "translateX(0px)" }],
     {
         duration: 500,
@@ -18,6 +18,7 @@ const animacaoApresentacao = containerApresentacao.animate(
 );
 
 const hamburgerButton = document.getElementById("hamburger-button");
+const navbarContainer = document.getElementById("navbar-container");
 const navItems = document.querySelectorAll(".navbar-item");
 hamburgerButton.addEventListener("click", () => {
 
