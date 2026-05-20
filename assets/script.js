@@ -1,4 +1,4 @@
-const containerPfp = document.getElementById("container-pfp");
+/*const containerPfp = document.getElementById("container-pfp");
 const containerApresentacao = document.getElementById("container-apresentacao");
 
 const animacaoPfp = containerPfp.animate(
@@ -28,4 +28,4 @@ hamburgerButton.addEventListener("click", () => {
         }
     )
 
-})
+})*/
