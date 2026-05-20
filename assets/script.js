@@ -16,16 +16,12 @@ containerApresentacao.animate(
         easing: "ease-in-out"
     }
 );
-
+*/
 const hamburgerButton = document.getElementById("hamburger-button");
-const navbarContainer = document.getElementById("navbar-container");
-const navItems = document.querySelectorAll(".navbar-item");
+const navbarContainer = document.querySelector(".navbar");
+
 hamburgerButton.addEventListener("click", () => {
 
-    navItems.forEach(
-        (item) => {
-            item.classList.toggle("hidden");
-        }
-    )
+    navbarContainer.classList.toggle("hidden");
 
-})*/
+})

@@ -5,9 +5,14 @@
     list-style-type: none;
 }
 
+@font-face {
+    font-family: "Bank Gothic Medium";
+    src: url(font/BankGothicMediumBT.ttf);
+}
+
 body {
     background-color: white;
-    font-family: sans-serif, Arial, Helvetica;
+    font-family: Bank Gothic Medium, sans-serif, Arial, Helvetica;
 }
 
 /*Navbar*/
@@ -15,48 +20,107 @@ body {
 #navbar-container {
     width: 100%;
     background: #131313;
-    height: 40vh;
+    /*height: 40vh;*/
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 5px;
 }
 
 #navbar-img {
-    border-bottom: 1px solid white;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
-    width: 70%;
+    width: 100%;
+    position: relative;
+}
+
+.navbar-mensagem {
+    width: 45%;
+    text-align: center;
+    display: none;
+}
+
+.navbar-mensagem h2 span {
+    color: gold;
+}
+
+.navbar-mensagem h2 {
+    color: white;
+}
+
+#primeira-mensagem {
+    transform: scaleY(1.5);
+}
+
+#segunda-mensagem {
+    padding: 8px;
+    margin: 10px;
+    border-radius: 10px;
+    transform: scaleY(1.2);
 }
 
 #container-image {
-    width: 18%;
+    width: 40%;
+    max-width: 200px;
+    position: relative;
+}
+
+@media(min-width: 992px) {
+    #container-image {
+        width: 10%;
+    }
 }
 
 #container-image img {
     max-width: 100%;
 }
 
-#navbar{
+.navbar {
     display: flex;
-    flex-direction: row;
-    width: 60%;
-    justify-content: space-between;
-    align-items: center;
+    /*flex-direction: row;*/
+    flex-direction: column;
+    /*width: 60%;*/
+    width: 100%;
+    /*justify-content: space-between;*/
+    align-items: flex-start;
+    gap: 2px;
 }
 
-#navbar li a{
+.navbar li {
+    width: 100%;
+}
+
+.navbar li a {
     text-decoration: none;
     color: white;
     border: 1px solid white;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    /*
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 10px 20px;*/
 }
 
-#navbar li a:hover{
+.navbar li a:hover {
     background-color: grey;
     color: white;
+}
+
+#hamburger-button {
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    margin-right: 5vw;
+}
+
+#hamburger-button:hover {
+    background: white;
+    color: black;
 }
 
 .hidden {
@@ -128,3 +192,28 @@ header {
 }
 
 /*Sobre mim*/
+
+@media(min-width: 768px) {
+
+    #hamburger-button {
+        display: none;
+    }
+
+    .navbar-mensagem {
+        display: block;
+        font-size: 0.7em;
+    }
+
+    #navbar-img::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 1px;
+        margin: auto;
+        background-color: white;
+    }
+
+}
