@@ -233,7 +233,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     border: 1px solid #DB9B25;
     border-radius: 5px;
     width: 90%;
@@ -245,11 +245,6 @@ body {
     line-height: 1.3em;
 }
 
-.servico h4{
-    margin-top: 0.5em;
-    border: 1px solid red;
-}
-
 .servico .imagem-servico {
     color: var(--golden-yellow);
     border: 2px solid var(--golden-yellow);
@@ -259,9 +254,14 @@ body {
     width: 70px;
 }
 
-.servico span{
-    border: 1px solid green;
+.servico h4 {
+    margin-top: 0.5em;
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
+
+.servico h5 {}
 
 @media(min-width: 768px) {
 
@@ -315,8 +315,8 @@ body {
     }
 
     #container-servicos {
-    grid-template-columns: 1fr 1fr;
-}
+        grid-template-columns: 1fr 1fr;
+    }
 
 }
 
@@ -347,6 +347,10 @@ body {
 
     .navbar-mensagem {
         font-size: 0.8em;
+    }
+
+    #container-servicos {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
