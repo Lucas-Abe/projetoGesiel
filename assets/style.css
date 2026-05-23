@@ -208,7 +208,8 @@ body {
 }
 
 /*Serviços*/
-.servicos {
+
+.secao-site{
     text-align: center;
     font-size: 1em;
     padding-top: 100px;
@@ -216,12 +217,21 @@ body {
     color: white;
 }
 
-.servicos h2 {
+.secao-site h2 {
     font-size: 1.7em;
     margin-bottom: 1em;
 }
 
-#container-servicos {
+#container-servicos{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-transform: uppercase;
+}
+
+#container-trabalhos {
     width: 80%;
     margin: auto;
     display: grid;
@@ -269,7 +279,34 @@ body {
     align-items: center;
 }
 
-.servico h5 {}
+/*Contatos*/
+
+footer{
+    padding: 10px;
+    padding-top: 100px;
+    background: #131313;
+    color: white;
+}
+
+footer h2 {
+    font-size: 1.7em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.contato-item{
+    width: 100%;
+    text-align: center;
+}
+
+.contato-item img{
+    max-width: 30%;
+}
 
 @media(min-width: 768px) {
 
