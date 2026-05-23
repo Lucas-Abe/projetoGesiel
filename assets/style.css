@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     list-style-type: none;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -243,6 +244,12 @@ body {
     text-align: center;
     padding: 15px;
     line-height: 1.3em;
+    transition: transform 0.3s;
+}
+
+.servico:hover{
+    background-color: #252525;
+    transform: scale(1.1);
 }
 
 .servico .imagem-servico {
@@ -252,6 +259,7 @@ body {
     padding: 0.3em;
     font-size: 2em;
     width: 70px;
+    background-color: #131313;
 }
 
 .servico h4 {
