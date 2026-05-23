@@ -15,8 +15,9 @@ body {
     font-family: sans-serif, Bank Gothic Medium, Arial, Helvetica;
 }
 
-:root{
-    --golden: linear-gradient(to bottom, #cf9f39, #95631c);
+:root {
+    --golden: linear-gradient(to bottom, #EBDB98 10%, #A1722F);
+    --golden-yellow: #EAA729;
 }
 
 /*Navbar*/
@@ -28,7 +29,6 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 5px;
-    font-family: Bank Gothic Medium;
 }
 
 #navbar-img {
@@ -45,9 +45,10 @@ body {
     width: 45%;
     text-align: center;
     display: none;
+    font-family: Bank Gothic Medium;
 }
 
-.navbar-mensagem h2 span {
+.golden {
     background-image: var(--golden);
     background-clip: text;
     color: transparent;
@@ -143,6 +144,10 @@ body {
     background-color: #131313;
     padding-top: 80px;
     color: white;
+    /*
+    border: 1px solid white;
+    padding: 5px;
+    */
 }
 
 #header-pfp {
@@ -202,7 +207,7 @@ body {
 }
 
 /*Serviços*/
-.servicos{
+.servicos {
     text-align: center;
     font-size: 1em;
     padding-top: 100px;
@@ -210,8 +215,52 @@ body {
     color: white;
 }
 
-.servicos h2{
+.servicos h2 {
     font-size: 1.7em;
+    margin-bottom: 1em;
+}
+
+#container-servicos {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-transform: uppercase;
+}
+
+.servico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #DB9B25;
+    border-radius: 5px;
+    width: 90%;
+    height: 180px;
+    max-width: 280px;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    line-height: 1.3em;
+}
+
+.servico h4{
+    margin-top: 0.5em;
+    border: 1px solid red;
+}
+
+.servico .imagem-servico {
+    color: var(--golden-yellow);
+    border: 2px solid var(--golden-yellow);
+    border-radius: 8px;
+    padding: 0.3em;
+    font-size: 2em;
+    width: 70px;
+}
+
+.servico span{
+    border: 1px solid green;
 }
 
 @media(min-width: 768px) {
@@ -265,6 +314,10 @@ body {
         width: 80%;
     }
 
+    #container-servicos {
+    grid-template-columns: 1fr 1fr;
+}
+
 }
 
 @media(min-width: 992px) {
@@ -309,7 +362,7 @@ body {
 
 }
 
-@media(min-width: 1400px){
+@media(min-width: 1400px) {
 
     #header-pfp {
         margin-left: 150px;
