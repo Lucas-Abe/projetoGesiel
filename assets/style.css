@@ -140,8 +140,8 @@ body {
 #cabecalho-site {
     display: flex;
     flex-direction: column;
-    /*flex-direction: row;*/
     align-items: center;
+    justify-content: center;
     background-color: #131313;
     padding-top: 80px;
     color: white;
@@ -209,7 +209,7 @@ body {
 
 /*Serviços*/
 
-.secao-site{
+.secao-site {
     text-align: center;
     font-size: 1em;
     padding-top: 100px;
@@ -222,7 +222,7 @@ body {
     margin-bottom: 1em;
 }
 
-#container-servicos{
+#container-servicos {
     width: 80%;
     margin: auto;
     display: grid;
@@ -257,7 +257,7 @@ body {
     transition: transform 0.3s;
 }
 
-.servico:hover{
+.servico:hover {
     background-color: #252525;
     transform: scale(1.1);
 }
@@ -281,9 +281,9 @@ body {
 
 /*Contatos*/
 
-footer{
+footer {
     padding: 10px;
-    padding-top: 100px;
+    padding-top: 80px;
     background: #131313;
     color: white;
 }
@@ -294,18 +294,38 @@ footer h2 {
     text-align: center;
 }
 
-footer ul{
+footer ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  
+}
+
+.contato-item {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#contatos ul{
+    border: 1px solid white;
+    border-radius: 10px;
 }
 
 .contato-item{
-    width: 100%;
-    text-align: center;
+    padding: 10px;
 }
 
-.contato-item img{
-    max-width: 30%;
+.contato-item img {
+    max-width: 100px;
+}
+
+.contato-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.contato-item a:hover {
+    text-decoration: underline;
+    font-weight: bolder;
 }
 
 @media(min-width: 768px) {
@@ -362,6 +382,18 @@ footer ul{
     #container-servicos {
         grid-template-columns: 1fr 1fr;
     }
+
+    footer ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.2em
+    }
+
+    #contato-whatsapp{
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
 
 }
 
@@ -424,8 +456,12 @@ footer ul{
         max-width: 220px;
     }
 
+    #container-apresentacao {
+        line-height: 1.4;
+    }
+
     #header-apresentacao {
-        font-size: 1.5em;
+        font-size: 1.7em;
     }
 
 }
