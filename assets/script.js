@@ -25,3 +25,25 @@ hamburgerButton.addEventListener("click", () => {
     navbarContainer.classList.toggle("hidden");
 
 })
+
+const toggleButton = document.querySelector("#toggle-mode");
+const toggleButtonIcon = document.querySelector("#toggle-mode i");
+const toggleButtonText = document.querySelector("#toggle-container span");
+const body = document.querySelector("body");
+
+toggleButton.addEventListener("click", () => {
+
+    if (toggleButtonIcon.classList.contains("fa-toggle-off")) {
+        toggleButtonIcon.classList.remove("fa-toggle-off");
+        toggleButtonIcon.classList.add("fa-toggle-on");
+        toggleButtonText.textContent = "Light Mode";
+        body.classList.add("white-mode");
+    }
+    else {
+        toggleButtonIcon.classList.remove("fa-toggle-on");
+        toggleButtonIcon.classList.add("fa-toggle-off");
+        toggleButtonText.textContent = "Dark Mode";
+        body.classList.remove("white-mode");
+    }
+
+})
