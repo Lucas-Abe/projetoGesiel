@@ -37,6 +37,9 @@ const servicoItems = document.querySelectorAll(".servico");
 
 const contatos = document.querySelectorAll(".contato-item");
 const contatoWhatsApp = document.getElementById("contato-whatsapp");
+const navbarImg = document.getElementById("navbar-img");
+
+const goldenText = document.querySelectorAll(".golden");
 
 toggleButton.addEventListener("click", () => {
 
@@ -65,6 +68,14 @@ toggleButton.addEventListener("click", () => {
         contatoWhatsApp.removeAttribute("id", "contato-whatsapp");
         contatoWhatsApp.setAttribute("id", "contato-whatsapp2");
         hamburgerButton.style.border = "1px solid black";
+
+        navbarImg.removeAttribute("id", "navbar-img");
+        navbarImg.setAttribute("id", "navbar-img2");
+        goldenText.forEach(
+            (text) => {
+                text.classList.add("golden2");
+            }
+        )
     }
     else {
         toggleButtonIcon.classList.remove("fa-toggle-on");
@@ -91,6 +102,14 @@ toggleButton.addEventListener("click", () => {
         contatoWhatsApp.removeAttribute("id", "contato-whatsapp2");
         contatoWhatsApp.setAttribute("id", "contato-whatsapp");
         hamburgerButton.style.border = "1px solid white";
+
+        navbarImg.removeAttribute("id", "navbar-img2");
+        navbarImg.setAttribute("id", "navbar-img");
+        goldenText.forEach(
+            (text) => {
+                text.classList.remove("golden2");
+            }
+        )
     }
 
 })

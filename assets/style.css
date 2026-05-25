@@ -24,7 +24,8 @@ body {
 }
 
 :root {
-    --golden: linear-gradient(to bottom, #EBDB98 10%, #A1722F);
+    --golden: linear-gradient(to bottom, #F5D94A, #C47A0F);
+    --intense-golden: linear-gradient(to bottom, #9C6A1F, #6A4213);
     --golden-yellow: #EAA729;
 }
 
@@ -48,6 +49,16 @@ body {
     position: relative;
 }
 
+#navbar-img2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    width: 100%;
+    position: relative;
+}
+
 .navbar-mensagem {
     width: 45%;
     text-align: center;
@@ -59,6 +70,10 @@ body {
     background-image: var(--golden);
     background-clip: text;
     color: transparent;
+}
+
+.golden2 {
+    background-image: var(--intense-golden);
 }
 
 .navbar-mensagem h2 {
@@ -149,6 +164,7 @@ body {
     border: 1px solid black;
     color: black;
 }
+
 
 .navbar li a:hover {
     background-color: grey;
@@ -307,7 +323,7 @@ body {
 }
 
 .servico2:hover {
-    background-color: #b7bbbf;
+    background-color: #dee0e2;
     transform: scale(1.1);
 }
 
@@ -391,6 +407,7 @@ footer ul {
 .contato-item a {
     color: white;
     text-decoration: none;
+    padding: 20px;
 }
 
 .contato-item2 a {
@@ -443,6 +460,18 @@ footer ul {
         height: 1px;
         margin: auto;
         background-color: white;
+    }
+
+    #navbar-img2::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 1px;
+        margin: auto;
+        background-color: black;
     }
 
     #navbar-container {
