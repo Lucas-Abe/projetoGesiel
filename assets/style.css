@@ -76,9 +76,6 @@ body {
     background-image: var(--intense-golden);
 }
 
-.navbar-mensagem h2 {
-    /*color: white;*/
-}
 
 #primeira-mensagem {
     transform: scaleY(1.5);
